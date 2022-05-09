@@ -387,7 +387,9 @@ let yubut = new button('.','ю','>','Ю');
 yubut.create();
 let qmbut = new button('/','.','?',',');
 qmbut.create();
-shtbut.width=150;
+let upbut = new button('↑','↑','↑','↑');
+upbut.create();
+shtbut.width=140;
 shtbut.create();
 let ctrbut = new funcButton('Control');
 ctrbut.width=45;
@@ -396,13 +398,21 @@ let winbut = new funcButton('Win');
 winbut.width=45;
 winbut.create();
 let altbut = new funcButton('Alt');
-altbut.width=45;
+altbut.width=50;
 altbut.create();
 let spcbut = new button(' ',' ',' ',' ');
-spcbut.width=250;
+spcbut.width=220;
 spcbut.create();
+
+let lftbut = new button('←','←','←','←');
+lftbut.create();
+let dwnbut = new button('↓','↓','↓','↓');
+dwnbut.create();
+let rgtbut = new button('→','→','→','→');
+rgtbut.create();
+altbut.width=40;
 altbut.create();
-winbut.create();
+
 ctrbut.create();
 
 }
