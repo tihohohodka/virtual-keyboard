@@ -1,0 +1,16 @@
+.keyboardHolder{
+    background-color: aqua;
+    width: 40vw;
+    align-self: center;
+
+
+}
+.Main{
+width: 100%;
+display: flex;;
+justify-content: center;
+align-items: center;
+
+
+
+}
