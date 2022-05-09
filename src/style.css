@@ -1,6 +1,6 @@
 .keyboardHolder{
     background-color: aqua;
-    width: 48vw;
+    width: 650px;
     align-self: center;
     display: flex;
     flex-wrap: wrap;
