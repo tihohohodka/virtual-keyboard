@@ -15,7 +15,7 @@ document.addEventListener("keydown",function(event) {
     event.preventDefault(); 
 if (event.code==='ShiftLeft'||event.code==='ShiftRight'){
     
-    isShift=true;
+    isShift=!isShift;
 
 }
 if (event.code==='CapsLock'){
@@ -27,7 +27,7 @@ if (event.code==='CapsLock'){
 document.addEventListener("keyup",function(event) {
     console.log(event.key);    
 if (event.code==='ShiftLeft'||event.code==='ShiftRight'){
-isShift=false;
+isShift=!isShift;
 
 }
 
@@ -162,7 +162,7 @@ class funcButton{
 
     constructor(name){
     this.name=name
-    this.width=60;
+    this.width=80;
     this.height= 32;
     }
     create(){
@@ -201,11 +201,13 @@ class funcButton{
                     let x = textArea.value;
                     textArea.value = x.slice(0, textArea.selectionStart) + x.slice(textArea.selectionStart+1);}})}     
                     
+                if (thisButton.name==='Enter'){document.addEventListener("keydown",function(event) {
+                    if (event.key==='Enter'){  textArea.value +='\n' }})}    
                    
                 
 
                     document.addEventListener("keydown",function(event) {
-                        if (event.key.name===thisButton.name){
+                        if (event.key===thisButton.name){
                     thisButton.classList.add('pressed');}
                 }
                 )
@@ -224,16 +226,26 @@ class funcButton{
                 if (this.name==='Tab'){
                     thisButton.addEventListener('click',e=>{ 
                     textArea.value +='\t' }
-                )}
+                )};
                 if (this.name==='Delete'){
                     thisButton.addEventListener('click',e=>{ 
                         let x = textArea.value;
                         textArea.value = x.slice(0, textArea.selectionStart) + x.slice(textArea.selectionStart+1); }
-                )}
+                )};
                 if (this.name==='CapsLock'){
                     thisButton.addEventListener('click',e=>{ 
                         isShift=!isShift; }
+                )};
+                if (this.name==='Enter'){
+                    thisButton.addEventListener('click',e=>{ 
+                        textArea.value+='\n' }
                 )}
+                if (this.name==='Enter'){
+                    thisButton.addEventListener('mousedown',e=>{ 
+                        isShift=!isShift })
+                    thisButton.addEventListener('mouseup',e=>{ 
+                            isShift=!isShift }
+                    )}
   
   
             
@@ -329,6 +341,69 @@ let delbut = new funcButton('Delete');
 delbut.create();
 let cpsbut = new funcButton('CapsLock');
 cpsbut.create();
+let abut = new button('a','ф','A','Ф');
+abut.create();
+let sbut = new button('s','ы','S','Ы');
+sbut.create();
+let dbut = new button('d','в','D','В');
+dbut.create();
+let fbut = new button('f','а','F','А');
+fbut.create();
+let gbut = new button('g','п','G','П');
+gbut.create();
+let hbut = new button('h','р','H','Р');
+hbut.create();
+let jbut = new button('j','о','J','О');
+jbut.create();
+let kbut = new button('k','л','K','Л');
+kbut.create();
+let lbut = new button('l','д','L','д');
+lbut.create();
+let ddbut = new button(';','ж',':','Ж');
+ddbut.create();
+let covbut = new button('\'','э','"','Э');
+covbut.create();
+let entbut = new funcButton('Enter');
+entbut.create();
+let shtbut = new funcButton('Shift');
+shtbut.create();
+let zbut = new button('z','я','Z','Я');
+zbut.create();
+let xbut = new button('x','ч','X','Ч');
+xbut.create();
+let cbut = new button('c','с','C','С');
+cbut.create();
+let vbut = new button('v','м','V','М');
+vbut.create();
+let bbut = new button('b','и','B','И');
+bbut.create();
+let nbut = new button('n','т','N','Т');
+nbut.create();
+let mbut = new button('m','ь','M','Ь');
+mbut.create();
+let bebut = new button(',','б','<','Б');
+bebut.create();
+let yubut = new button('.','ю','>','Ю');
+yubut.create();
+let qmbut = new button('/','.','?',',');
+qmbut.create();
+shtbut.width=150;
+shtbut.create();
+let ctrbut = new funcButton('Control');
+ctrbut.width=45;
+ctrbut.create();
+let winbut = new funcButton('Win');
+winbut.width=45;
+winbut.create();
+let altbut = new funcButton('Alt');
+altbut.width=45;
+altbut.create();
+let spcbut = new button(' ',' ',' ',' ');
+spcbut.width=250;
+spcbut.create();
+altbut.create();
+winbut.create();
+ctrbut.create();
 
 }
 function readCookie(name) {
@@ -339,4 +414,4 @@ function readCookie(name) {
   
 }  
 
-console.log(readCookie('Cookielanguage'));
+console.log(readCookie('Cookielanguage'))
