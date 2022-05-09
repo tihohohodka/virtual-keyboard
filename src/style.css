@@ -1,6 +1,6 @@
 .keyboardHolder{
     background-color: aqua;
-    width: 40vw;
+    width: 50vw;
     align-self: center;
 
 
@@ -10,7 +10,12 @@ width: 100%;
 display: flex;;
 justify-content: center;
 align-items: center;
-
+flex-direction: column;
+gap:30px;
+}
+.textBox{
+width:50%;
+height:250px;
 
 
 }
