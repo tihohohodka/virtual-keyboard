@@ -406,6 +406,7 @@ spcbut.create();
 
 let lftbut = new button('←','←','←','←');
 lftbut.create();
+
 let dwnbut = new button('↓','↓','↓','↓');
 dwnbut.create();
 let rgtbut = new button('→','→','→','→');
@@ -414,7 +415,20 @@ altbut.width=40;
 altbut.create();
 
 ctrbut.create();
-
+document.addEventListener('keydown', e=>{
+    if (e.key==='ArrowLeft'){
+        textArea.value+='←'
+    }
+    if (e.key==='ArrowRight'){
+        textArea.value+='→'
+    }
+    if (e.key==='ArrowDown'){
+        textArea.value+='↓'
+    }
+    if (e.key==='ArrowUp'){
+        textArea.value+='↑'
+    }
+    })
 }
 function readCookie(name) {
     var matches = document.cookie.match(new RegExp(
