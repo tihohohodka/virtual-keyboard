@@ -14,10 +14,14 @@ module: {
         {
             test: /\.css$/,
             use: ['style-loader','css-loader']
+        },
+        {
+            test:/\.js$/,
+            use: ['eslint-loader']
         }
     ]
 
- }
+ },
 
 
 

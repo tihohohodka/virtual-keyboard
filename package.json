@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
+    "eslint-loader": "^4.0.2",
     "style-loader": "^3.3.1",
     "webpack": "^5.72.0"
   },
@@ -8,7 +10,14 @@
   "description": "rep for virtual keyboard task",
   "version": "1.0.0",
   "main": "index.js",
+  "babel": {
+    "plugins": [
+      "@babel/plugin-syntax-import-assertions"
+    ]
+  },
   "devDependencies": {
+    "@babel/plugin-syntax-import-assertions": "^7.16.7",
+    "eslint-webpack-plugin": "^3.1.1",
     "webpack-cli": "^4.9.2"
   },
   "scripts": {

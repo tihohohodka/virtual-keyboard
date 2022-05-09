@@ -40,6 +40,16 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
 
 /***/ }),
 
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\ndocument.adoptedStyleSheets = [_style_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"]];\r\nwindow.onload = function()\r\n{\r\n    const body = document.body;\r\nlet keyboard = document.createElement(\"div\");\r\nkeyboard.innerHTML = \"Привет!\";\r\nkeyboard.classList.add('keyboardHolder')\r\n\r\n\r\nlet Main = document.createElement(\"div\");\r\n\r\nMain.classList.add('Main')\r\n\r\nbody.appendChild(Main);\r\nMain.appendChild(keyboard);\r\nlet language = 'rus';\r\n\r\ndocument.cookie = `Cookielanguage=${language}`;\r\n \r\n\r\n}\r\nfunction readCookie(name) {\r\n    var matches = document.cookie.match(new RegExp(\r\n      \"(?:^|; )\" + name.replace(/([\\.$?*|{}\\(\\)\\[\\]\\\\\\/\\+^])/g, '\\\\$1') + \"=([^;]*)\"\r\n    ));\r\n    return matches ? decodeURIComponent(matches[1]) : undefined;\r\n  \r\n}  \r\n\r\nconsole.log(readCookie('Cookielanguage'));\n\n//# sourceURL=webpack://virtual-keyboard/./src/index.js?");
+
+/***/ }),
+
 /***/ "./src/style.css":
 /*!***********************!*\
   !*** ./src/style.css ***!
@@ -107,16 +117,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 /***/ ((module) => {
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://virtual-keyboard/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\ndocument.adoptedStyleSheets = [_style_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"]];\r\nwindow.onload = function()\r\n{\r\n    const body = document.body;\r\nlet keyboard = document.createElement(\"div\");\r\nkeyboard.innerHTML = \"Привет!\";\r\nkeyboard.classList.add('keyboardHolder')\r\n\r\n\r\nlet Main = document.createElement(\"div\");\r\n\r\nMain.classList.add('Main')\r\n\r\nbody.appendChild(Main);\r\nMain.appendChild(keyboard);\r\nlet language = 'rus';\r\n\r\ndocument.cookie = `Cookielanguage=${language}`;\r\n \r\n\r\n}\r\nfunction readCookie(name) {\r\n    var matches = document.cookie.match(new RegExp(\r\n      \"(?:^|; )\" + name.replace(/([\\.$?*|{}\\(\\)\\[\\]\\\\\\/\\+^])/g, '\\\\$1') + \"=([^;]*)\"\r\n    ));\r\n    return matches ? decodeURIComponent(matches[1]) : undefined;\r\n  \r\n}  \r\n\r\nconsole.log(readCookie('Cookielanguage'));\n\n//# sourceURL=webpack://virtual-keyboard/./src/index.js?");
 
 /***/ })
 
