@@ -1,0 +1,10 @@
+{"no-restricted-imports": ["error", "import1", "import2"],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "babelOptions": {
+          "parserOpts": {
+            "plugins": ["importAssertions"]
+          }
+        }
+      }
+}
