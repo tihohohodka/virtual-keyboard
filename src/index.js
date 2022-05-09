@@ -25,7 +25,7 @@ if (event.code==='CapsLock'){
 
 }, false);
 document.addEventListener("keyup",function(event) {
-    console.log(event.key);    
+     
 if (event.code==='ShiftLeft'||event.code==='ShiftRight'){
 isShift=!isShift;
 
@@ -40,17 +40,17 @@ document.addEventListener("keydown",function(event) {
     if (event.shiftKey&&flag){
 
         flag=false;
-        console.log('shift+alt');
+        
 
         if (language==='rus'){
             language='eng';
             document.cookie = `Cookielanguage=${language}`;
-            console.log(language);
+            
         
         }else{
             language='rus';
             document.cookie = `Cookielanguage=${language}`;
-            console.log(language);
+           
 
         }
     
@@ -413,5 +413,3 @@ function readCookie(name) {
     return matches ? decodeURIComponent(matches[1]) : undefined;
   
 }  
-
-console.log(readCookie('Cookielanguage'))
